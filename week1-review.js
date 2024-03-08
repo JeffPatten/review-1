@@ -67,16 +67,29 @@ let person = {
 };
 
 let person2 = {
-  firstName: "Arianna",
-  lastName: "Contardo",
-  favoriteColor: "pink",
+  firstName: "John",
+  lastName: "Doe",
+  favoriteColor: "green",
+  favFoods: [
+    {
+      foodName: 'Donuts',
+      type: 'dessert',
+      avgPrice: 1
+    },
+    {
+      foodName: 'Pizza',
+      type: 'delicious',   // find person2's 2nd favorite food price    person2.favFoods[1].avgPrice => 18
+      avgPrice: 18
+    }
+    
+  ]
 };
 
 // accessing values
 
 // dot notation - object name dot key name = obj.key  !!!!MOST USED!!!!
 person.favColor; // this returns 'blue'
-person2.favoriteColor; //this returns 'pink'
+person2.favoriteColor; //this returns 'green'
 
 //bracket notation - use a string for the key name or a variable.  !!!MOSTLY USED in specific loops - not often used!!!
 person["favColor"]; // with quotes, you are using a key name.           returns 'blue'
@@ -84,7 +97,12 @@ person["favColor"]; // with quotes, you are using a key name.           returns 
 let color = "favoriteColor";
 person2[color]; // => person2['favoriteColor'] // without quotes, you are using a variable name.   returns 'pink
 
-/* -------------------------------- CONDITIONALS ------------------------------- */
+                                   
+
+
+
+
+                                          /* -------------------------------- CONDITIONALS ------------------------------- */
 
 // if (a condition - truthy/falsy) {                            // The 'if' keyword lets javascript know to expect certain syntax (grammar). ie there should be parenthesis and then curly brackets
       //run some code
@@ -117,3 +135,48 @@ if (whoAmI === `I'm Jeff`) {
 }
 
 console.log(whoAmI)
+
+
+
+
+/* ------------------------- LOOPS and HIGHER ORDER ARRAY METHODS ------------------------------ */
+
+// While loops
+let i = 0
+
+while (i < 10) {
+  console.log(i)
+  i++                               // the ++ is called an incrementor. It increases a number by 1. -- is called a decrementor, it decreases a number by 1
+}
+
+
+// For loops
+for (let i = 0; i < 10; i++) {     // 'let i' is giving a counter that we can increase or decrease, and it gives us a starting point. ; 'i < 10' while the condition is true, keep looping; 'i++' adds 1 to i. This happens after the code block runs.
+ 
+  //run your code each time it loops. Typically, run this on each item in an array.
+}
+
+let loopArr = ['jeff', 'alec', 'arianna', 'mitch']   // the length is 4
+
+//to access your name loopArr[2]
+
+for (let i = 0; i < loopArr.length; i++) {  // This allows us to access a single value in the array for each loop
+  console.log(loopArr[i])                   //first loop i = 0, second time i = 1, third time i = 2   // 1st loop = 'jeff', 2nd loop = 'alec', etc.
+}
+
+
+// Higher Order Array Methods
+
+//each of these loops over an array and gives you a single value. They each take in(argument/parameter) a call back function. The purpose of the function is to run some code on the individual value in the array.
+
+// callbackfunction: (individual item from the array) {            //this is similar to the { } (code block) from a for loop
+//  write some code to do something with it.
+// }
+
+.forEach(callback)    // callback(element) {return `Hi! ` + element}
+
+.map()
+
+.filter()
+
+.reduce()
