@@ -47,7 +47,7 @@ const inlineArrowFunc = () => true           // if you are only returning someth
 // Note: the numbers passed in for `healthDebuff` will be
 // decimals, for example: .15 for a 15% health debuff.
 
-
+          damageAndDebuff( 90,             5,            .05)
 function damageAndDebuff (healthTotal, baseDamage, healthDebuff) {    // It is like you are describing how the code will run
     
     healthTotal = healthTotal - baseDamage
@@ -75,3 +75,37 @@ damageAndDebuff(100, 10, .15)  // let healthTotal = 100, let baseDamage = 10, le
 // let newHealth = damageAndDebuff(character, 10, .15)
 // console.log(newHealth)
 
+/* --------------------------------- SYNTAX ----------------------------------- */
+let arr = []
+let obj = {}
+
+if () {}
+for () {}
+function func (parameters) {} // creating the function. Parameters are placeholders for the arguments you will use
+func(arguments) // running the function. arguments are the actual data you want to use when you run the function
+func(arguments2)
+
+
+function inception () {
+    if (){
+        // if statement code
+        for () {
+            //for loop code runs
+            if () {
+                // if statement code
+            }
+        }
+    } else if () {
+        if () {
+            for() {
+                
+            }
+        }
+    }
+}
+
+// [5, 6, 3, 1, 2, 3, 4, 5, 6, 7] => '(563) 123 - 4567'
+// phoneFormatter([5, 6, 3, 1, 2, 3, 4, 5, 6, 7])
+// phoneFormatter([your number])
+// phoneFormatter([my number])
+// phoneFormatter([alecs number])
