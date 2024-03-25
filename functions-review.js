@@ -18,6 +18,16 @@ const funcExpressArrow = () => {}
 const funcExpressArrow2 = param1 => {}       // if you have one and only 1 parameter, you don't have to use the parentheses.
 const inlineArrowFunc = () => true           // if you are only returning something, you can leave off the curly brackets and the return keyword.
 
+
+.map((elem) => {
+ elem-1
+})
+
+function mapFunc (elem) {
+    return elem - 1
+}
+
+.map(mapFunc)
                                         // The anatomy of a function
 
 // function functionName (input or parameters or take in) {
@@ -76,14 +86,21 @@ damageAndDebuff(100, 10, .15)  // let healthTotal = 100, let baseDamage = 10, le
 // console.log(newHealth)
 
 /* --------------------------------- SYNTAX ----------------------------------- */
-let arr = []
-let obj = {}
+let arr = [{}, [], '', 2]
+let str = 'Bob'
+let obj = {
+    arr: [],
+    obj: {},
+    str: `don't ${str}`,
+    num: 2
+}
 
-if () {}
-for () {}
+if () {}                      // () = condition, 
+for () {}                     //
+function func2 () {}                   //
 function func (parameters) {} // creating the function. Parameters are placeholders for the arguments you will use
 func(arguments) // running the function. arguments are the actual data you want to use when you run the function
-func(arguments2)
+func(arguments2) 
 
 
 function inception () {
@@ -109,3 +126,18 @@ function inception () {
 // phoneFormatter([your number])
 // phoneFormatter([my number])
 // phoneFormatter([alecs number])
+
+function towerBuilder (num) {   // num will be how many floors. ie how many items are in the array.
+    let tower = []
+
+    // Part 1: figuring out the strings.
+    // each floor will increase the number of characters in a string to teh next odd number. ie 1 floor = 1 character, 2 floors is 3 characters, 3 floors is 5 characters, etc
+    
+    // Part 2: how do we get each string in the array.
+    // what tools do I have? .push, 
+
+
+    return
+}
+
+towerBuilder(3)
